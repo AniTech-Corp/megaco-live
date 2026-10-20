@@ -2124,41 +2124,119 @@
         line-height: 1.6;
       }
       .mg-s-promo {
-        padding: 50px 0 35px;
+        padding: 42px 0 32px;
       }
       .mg-catalog-header {
-        margin-bottom: 20px;
+        margin-bottom: 16px;
+      }
+      .mg-s-promo .mg-section-tag {
+        font-size: 11px !important;
+        letter-spacing: 0.08em !important;
+        margin-bottom: 6px !important;
+      }
+      .mg-s-promo .mg-section-h2 {
+        font-size: clamp(20px, 5.2vw, 26px) !important;
+        line-height: 1.25 !important;
+        margin-bottom: 8px !important;
       }
       .mg-catalog-subtitle {
-        font-size: 13.5px;
-        line-height: 1.6;
+        font-size: 12.5px !important;
+        line-height: 1.55 !important;
+        color: #64748B !important;
       }
+
+      /* Search Bar Mobile */
+      .mg-catalog-search-wrap {
+        position: relative;
+        margin: 14px 0 12px 0;
+        width: 100%;
+      }
+      .mg-catalog-search {
+        width: 100%;
+        padding: 11px 36px 11px 38px;
+        font-family: 'Plus Jakarta Sans', var(--font-sans);
+        font-size: 13px;
+        border-radius: 12px;
+        border: 1px solid rgba(11, 28, 48, 0.14);
+        background: #FFFFFF;
+        color: #0F172A;
+        outline: none;
+        box-shadow: 0 2px 8px rgba(11, 28, 48, 0.04);
+        transition: all 0.2s ease;
+        box-sizing: border-box;
+      }
+      .mg-catalog-search:focus {
+        border-color: #FF6B00;
+        box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.15);
+      }
+      .mg-search-icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #94A3B8;
+        display: flex;
+        align-items: center;
+        pointer-events: none;
+      }
+      .mg-search-icon .material-symbols-outlined {
+        font-size: 18px;
+      }
+      .mg-search-clear {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #94A3B8;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 4px;
+      }
+
+      /* Sticky Mobile Category Bar */
+      .mg-catalog-sticky-bar {
+        position: sticky;
+        top: 54px;
+        z-index: 100;
+        background: rgba(248, 250, 252, 0.96);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: 8px 0 6px 0;
+        border-bottom: 1px solid rgba(226, 232, 240, 0.85);
+        margin: 0 -16px 14px -16px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
       .mg-catalog-tabs-wrap {
-        margin-bottom: 22px;
+        margin-bottom: 0;
         width: 100%;
         max-width: 100%;
         min-width: 0;
         overflow: hidden;
         position: relative;
       }
+      /* Fixed: White/light gradient fade on light catalog background */
       .mg-catalog-tabs-wrap::after {
         content: '';
         position: absolute;
         top: 0;
         right: 0;
-        bottom: 12px;
-        width: 36px;
-        background: linear-gradient(90deg, transparent, #030816);
+        bottom: 0;
+        width: 32px;
+        background: linear-gradient(90deg, transparent, rgba(248, 250, 252, 0.98));
         pointer-events: none;
-        opacity: 0.95;
+        opacity: 1;
       }
       .mg-catalog-tabs {
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        gap: 8px;
-        padding: 4px 24px 12px 4px;
+        gap: 6px;
+        padding: 2px 20px 6px 2px;
         margin-bottom: 0;
         min-width: 0;
         width: 100%;
@@ -2171,50 +2249,114 @@
       .mg-catalog-tab {
         flex-shrink: 0;
         white-space: nowrap;
-        padding: 9px 18px;
-        font-size: 13px;
-        border-radius: 24px;
+        padding: 7px 14px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 20px;
+        background: #FFFFFF;
+        border: 1px solid rgba(11, 28, 48, 0.12);
+        color: #475569;
         -webkit-tap-highlight-color: transparent;
       }
+      .mg-catalog-tab.active {
+        background: #0B1C30 !important;
+        color: #FFFFFF !important;
+        border-color: #0B1C30 !important;
+        box-shadow: 0 2px 8px rgba(11, 28, 48, 0.2) !important;
+      }
+
+      /* 2-COLUMN HIGH-DENSITY MOBILE PRODUCT GRID */
       .mg-catalog-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
       }
       .mg-promo-card {
-        border-radius: 16px;
+        border-radius: 12px !important;
+        border: 1px solid rgba(226, 232, 240, 0.9) !important;
+        box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04) !important;
+        background: #FFFFFF !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
       }
       .mg-promo-img-wrap {
-        height: 190px;
-        padding: 16px;
+        height: 125px !important;
+        padding: 10px !important;
+        background: #FFFFFF !important;
+        border-bottom: 1px solid #F1F5F9 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .mg-real-prod-img {
+        max-width: 90% !important;
+        max-height: 85% !important;
+        object-fit: contain !important;
       }
       .mg-promo-content {
-        padding: 18px 16px;
+        padding: 10px 8px 10px 8px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        flex-grow: 1 !important;
+      }
+      .mg-promo-category {
+        font-size: 9.5px !important;
+        font-weight: 700 !important;
+        color: #FF6B00 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.04em !important;
+        margin-bottom: 3px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
       }
       .mg-promo-title {
-        font-size: 16px;
-        line-height: 1.35;
-        margin-bottom: 8px;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        color: #0B1C30 !important;
+        line-height: 1.32 !important;
+        margin-bottom: 6px !important;
+        min-height: 32px !important;
+        max-height: 32px !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
       }
       .mg-promo-desc {
-        font-size: 13px;
-        line-height: 1.55;
-        margin-bottom: 16px;
+        display: none !important; /* Disembunyikan di 2-kolom mobile agar kartu seragam & rapi */
+      }
+      .mg-card-action {
+        margin-top: auto !important;
+        padding-top: 4px !important;
       }
       .mg-btn-prod-wa {
-        width: 100%;
-        min-height: 46px;
-        font-size: 13.5px;
-        justify-content: center;
-        border-radius: 10px;
-        box-sizing: border-box;
+        width: 100% !important;
+        min-height: 34px !important;
+        padding: 7px 8px !important;
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        border-radius: 8px !important;
+        background: #0B1C30 !important;
+        color: #FFFFFF !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 5px !important;
+        box-sizing: border-box !important;
+      }
+      .mg-btn-prod-wa svg {
+        width: 13px !important;
+        height: 13px !important;
       }
       .mg-btn-show-more {
-        width: 100%;
-        max-width: 320px;
-        min-height: 48px;
-        font-size: 13.5px;
-        padding: 12px 20px;
-        box-sizing: border-box;
+        width: 100% !important;
+        max-width: 300px !important;
+        min-height: 46px !important;
+        font-size: 13px !important;
+        padding: 10px 18px !important;
+        margin: 20px auto 0 !important;
+        box-sizing: border-box !important;
       }
       .mg-float-wa {
         width: auto;
@@ -2585,9 +2727,17 @@
           <p class="mg-catalog-subtitle">
             Penyediaan perangkat pasif dan aktif telekomunikasi terlengkap dengan sertifikasi resmi TKDN &amp; CIQS dari portofolio resmi PT Megaco Networks Indonesia untuk tender dan pengadaan proyek nasional.
           </p>
+        
+          <!-- Search Bar Mobile/Desktop Cepat -->
+          <div class="mg-catalog-search-wrap">
+            <span class="mg-search-icon"><span class="material-symbols-outlined">search</span></span>
+            <input type="text" id="catalogSearchInput" class="mg-catalog-search" placeholder="Cari tipe kabel optik, switch, baterai, FTTH..." oninput="handleCatalogSearch(this.value)">
+            <button id="catalogSearchClear" class="mg-search-clear" onclick="clearCatalogSearch()" style="display: none;">✕</button>
+          </div>
         </div>
 
-                        <!-- Filter Prinsipal / Brand Tabs -->
+        <!-- Filter Prinsipal / Brand Tabs (Sticky di Mobile) -->
+        <div class="mg-catalog-sticky-bar">
         <div class="mg-catalog-tabs-wrap">
           <div class="mg-catalog-tabs mg-reveal mg-delay-1">
           <button class="mg-catalog-tab active" onclick="filterCatalog('all', this)">
@@ -2608,6 +2758,8 @@
           <button class="mg-catalog-tab" onclick="filterCatalog('hfcl', this)">
             HFCL Limited (4)
           </button>
+        </div>
+
         </div>
 
         </div>
@@ -3652,6 +3804,52 @@
     });
 
     // =========================================================================
+    // =========================================================================
+    // KATALOG PRODUK: LIVE INSTANT SEARCH FILTER
+    // =========================================================================
+    function handleCatalogSearch(query) {
+      const q = query.trim().toLowerCase();
+      const clearBtn = document.getElementById('catalogSearchClear');
+      if (clearBtn) {
+        clearBtn.style.display = q ? 'block' : 'none';
+      }
+
+      const cards = document.querySelectorAll('.mg-promo-card');
+      const moreWrap = document.getElementById('catalogMoreWrap');
+
+      if (!q) {
+        // Return to normal category view
+        filterCatalog(currentCategory, document.querySelector(`.mg-catalog-tab[onclick*="${currentCategory}"]`));
+        return;
+      }
+
+      // Hide show more wrapper when searching
+      if (moreWrap) moreWrap.style.display = 'none';
+
+      let matchCount = 0;
+      cards.forEach(card => {
+        const title = (card.querySelector('.mg-promo-title')?.textContent || '').toLowerCase();
+        const desc = (card.querySelector('.mg-promo-desc')?.textContent || '').toLowerCase();
+        const cat = (card.querySelector('.mg-promo-category')?.textContent || '').toLowerCase();
+        const brand = (card.dataset.category || '').toLowerCase();
+
+        if (title.includes(q) || desc.includes(q) || cat.includes(q) || brand.includes(q)) {
+          card.style.display = 'flex';
+          matchCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function clearCatalogSearch() {
+      const input = document.getElementById('catalogSearchInput');
+      if (input) {
+        input.value = '';
+        handleCatalogSearch('');
+      }
+    }
+
     // KATALOG PRODUK: TAB FILTER & SHOW MORE TOGGLE
     // =========================================================================
     let isCatalogExpanded = false;
