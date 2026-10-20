@@ -1,0 +1,5 @@
+.git
+server.js
+Dockerfile
+docker-compose.yml
+.dockerignore
